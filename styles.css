@@ -68,6 +68,11 @@ h5 {
   list-style: none;
   padding: 0;
   margin: 0;
+  display: flex; /* Hace que los <li> estén en línea */
+  gap: 24px; /* Espacio entre los links, opcional */
+  justify-content: center;
+  align-items: center;
+  padding: 1rem;
 }
 
 .nav-bar a {
@@ -187,4 +192,35 @@ header h3 {
 
 .footer ul {
   list-style: none;
+}
+
+.structure-cards {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 32px;
+  justify-items: stretch;
+  align-items: stretch;
+  margin: 40px 0;
+}
+
+.service-box {
+  background: var(--white);
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.12);
+  padding: 32px 24px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  min-height: 320px; /* Altura mínima igual para todas */
+  height: 100%; /* Ocupará todo el alto de la celda */
+  box-sizing: border-box;
+}
+
+/* Permite que los párrafos hagan salto de línea */
+.service-box p {
+  font-size: 1.7em;
+  word-break: break-word;
+  white-space: normal;
+  line-height: 1.3;
 }
